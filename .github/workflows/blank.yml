@@ -3,7 +3,7 @@ on: workflow_dispatch
 jobs:
  firstjob:
   runs-on: ubuntu-latest
-   -name:print-greeting
+   - name:print-greeting
     run:echo "hello world!"
-   -name:Print goodbye
+   - name:Print goodbye
     run:echo "goodbye"
