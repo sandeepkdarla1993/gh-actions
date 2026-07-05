@@ -8,3 +8,5 @@ jobs:
      run: echo "hello world!"
    - name: Print goodbye
      run: echo "goodbye"
+   - name: run test
+     run: npm test
