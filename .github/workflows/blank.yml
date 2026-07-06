@@ -8,5 +8,8 @@ jobs:
      run: echo "hello world!"
    - name: Print goodbye
      run: echo "goodbye"
-   - name: run test
-     run: npm test
+  secondjob:
+   runs-on:ubuntu-latest
+   steps:
+    - name: printgreeting
+      run: echo "new job"
