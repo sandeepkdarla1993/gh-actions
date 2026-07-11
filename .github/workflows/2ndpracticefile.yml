@@ -1,8 +1,8 @@
 name: 2ndpractice github
-on: workflow_dispatch
+on: push
 jobs:
  test_expression:
-  runs-on: ubuntu
+  runs-on: ubuntu-latest
   steps:
    - name: log expression
      run: echo "${{ toJSON(github.event) }}"
