@@ -1,5 +1,5 @@
 name: first CI Job
-on: push
+on: [push, workflow_dispatch]
 jobs:
  firstjob:
   runs-on: ubuntu-latest
