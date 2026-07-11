@@ -1,5 +1,5 @@
 name: 2ndpractice github
-on: push
+on: workflow_dispatch
 jobs:
  test_expression:
   runs-on: ubuntu
