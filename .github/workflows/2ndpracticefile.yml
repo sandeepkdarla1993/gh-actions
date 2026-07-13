@@ -25,14 +25,14 @@ jobs:
      with:
       name: React-buil-artifact
       path: ecomm-react-app/dist/
- deploy:
-  needs: test_expression
-  runs-on: ubuntu-latest
-  steps:
-  - name: download-artifact
-    uses: actions/download-artifact@v4
-    with:
-     name: React-buil-artifact
-     path: /artifacts
+#  deploy:
+#   needs: test_expression
+#   runs-on: ubuntu-latest
+#   steps:
+#   - name: download-artifact
+#     uses: actions/download-artifact@v4
+#     with:
+#      name: React-buil-artifact
+#      path: /artifacts
   
     
