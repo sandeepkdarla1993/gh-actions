@@ -9,6 +9,8 @@ on:
 jobs:
  test_expression:
   runs-on: ubuntu-latest
+  outputs: 
+   my-value: ${{steps.echo-value.outputs.script}}
   steps:
    - name: checkout code
      uses: actions/checkout@v4
@@ -16,6 +18,9 @@ jobs:
      run: echo "${{ toJSON(github.event) }}"
    - name: print message
      run: echo "hello world"
+   - name: output test
+     id: echo-value
+     run: echo "script=src.js" >> "$GITHUB_OUTPUT"
    - name: install dependencies
      run: cd ecomm-react-app && npm install
    - name: build Project
