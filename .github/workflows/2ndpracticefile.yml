@@ -20,19 +20,19 @@ jobs:
      run: cd ecomm-react-app && npm install
    - name: build Project
      run: cd ecomm-react-app && npm run build
-   - name: download articraft
+   - name: upload articraft
      uses: actions/upload-artifact@v4
      with:
       name: React-buil-artifact
       path: ecomm-react-app/dist/
-#  deploy:
-#   needs: test_expression
-#   runs-on: ubuntu-latest
-#   steps:
-#   - name: download-artifact
-#     uses: actions/download-artifact@v4
-#     with:
-#      name: React-buil-artifact
-#      path: /artifacts
+ deploy:
+  needs: test_expression
+  runs-on: ubuntu-latest
+  steps:
+   - name: download-artifact
+     uses: actions/download-artifact@v4
+     with:
+      name: React-buil-artifact
+      path: /artifacts
   
     
